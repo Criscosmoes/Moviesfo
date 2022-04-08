@@ -1,12 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+import { fetchMovies } from "../src/helper";
 
 // components
 
 import NavBar from "../src/components/NavBar/NavBar";
 import TopMovie from "../src/components/TopMovie/TopMovie";
-import { fetchMovies } from "../src/helper";
+import MovieList from "../src/components/MovieList/MovieList";
 
 export default function Home({ topMovie, movieList }) {
   return (
@@ -20,6 +21,7 @@ export default function Home({ topMovie, movieList }) {
       <div className={styles.content}>
         <NavBar />
         <TopMovie /* topMovie={topMovie} */ />
+        <MovieList />
       </div>
     </div>
   );
