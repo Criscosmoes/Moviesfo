@@ -5,10 +5,10 @@ import styles from "../styles/Home.module.scss";
 // components
 
 import NavBar from "../src/components/NavBar/NavBar";
+import TopMovie from "../src/components/TopMovie/TopMovie";
+import { fetchMovies } from "../src/helper";
 
-export default function Home() {
-  console.log(styles.main);
-
+export default function Home({ topMovie, movieList }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,7 +19,19 @@ export default function Home() {
 
       <div className={styles.content}>
         <NavBar />
+        <TopMovie /* topMovie={topMovie} */ />
       </div>
     </div>
   );
 }
+
+/* export async function getServerSideProps() {
+  const data = await fetchMovies();
+
+  const { topMovie, movieList } = data;
+
+  return {
+    props: { topMovie, movieList },
+  };
+}
+ */

@@ -1,0 +1,50 @@
+.top-movie {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 450px;
+  margin: 2%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.title {
+  margin-left: 3%;
+  width: 30%;
+  color: white;
+  font-size: 45px;
+  font-family: "Oxygen", sans-serif;
+  margin-bottom: 1%;
+}
+
+.cta {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2%;
+  width: 25%;
+  height: 50px;
+  margin-bottom: 2%;
+  border-radius: 10px;
+}
+
+.info-btn {
+  width: 80%;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.icon {
+  color: white;
+  width: 20%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+}
