@@ -20,14 +20,16 @@ export default function Home({ topMovie, movieList }) {
 
       <div className={styles.content}>
         <NavBar />
-        <TopMovie /* topMovie={topMovie} */ />
-        <MovieList />
+        <TopMovie topMovie={topMovie} />
+        <MovieList title={"Popular"} allMovies={movieList.popular} />
+        <MovieList title={"Top Rated"} allMovies={movieList.topRated} />
+        <MovieList title={"Upcoming"} allMovies={movieList.upcoming} />
       </div>
     </div>
   );
 }
 
-/* export async function getServerSideProps() {
+export async function getServerSideProps() {
   const data = await fetchMovies();
 
   const { topMovie, movieList } = data;
@@ -36,4 +38,3 @@ export default function Home({ topMovie, movieList }) {
     props: { topMovie, movieList },
   };
 }
- */

@@ -6,15 +6,13 @@ const TopMovie = ({ topMovie }) => {
     <div
       className={styles["top-movie"]}
       style={{
-        /* backgroundImage: `url(https://image.tmdb.org/t/p/original${topMovie.backdrop_path})`, */
-        backgroundImage:
-          "url(https://image.tmdb.org/t/p/original/x747ZvF0CcYYTTpPRCoUrxA2cYy.jpg)",
+        backgroundImage: `url(https://image.tmdb.org/t/p/original${topMovie.backdrop_path})`,
       }}
     >
       <div className={styles["movie-info"]}>
         <div className={styles.title}>
-          <h2>MOONFALL</h2>
-          <h4>2021</h4>
+          <h2>{topMovie.title || topMovie.original_title}</h2>
+          <h4>{topMovie.release_date}</h4>
         </div>
         <div className={styles.cta}>
           <button className={styles["info-btn"]}>WATCH NOW</button>

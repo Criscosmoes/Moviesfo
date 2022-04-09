@@ -1,3 +1,23 @@
 .movie-container {
   margin: 1%;
 }
+
+.list {
+  display: flex;
+  overflow-x: auto;
+}
+
+.movie {
+  height: 550px;
+  min-width: 400px;
+  margin: 1% 1%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(80%);
+}
+
+.title {
+  margin-left: 1%;
+  font-size: 25px;
+  font-family: "Oxygen", sans-serif;
+}
