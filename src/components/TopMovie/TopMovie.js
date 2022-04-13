@@ -12,11 +12,9 @@ const TopMovie = ({ topMovie }) => {
       <div className={styles["movie-info"]}>
         <div className={styles.title}>
           <h2>{topMovie.title || topMovie.original_title}</h2>
-          <h4>{topMovie.release_date}</h4>
         </div>
         <div className={styles.cta}>
           <button className={styles["info-btn"]}>WATCH NOW</button>
-          <AddBoxIcon className={styles.icon} />
         </div>
       </div>
     </div>

@@ -1,23 +1,58 @@
-.movie-container {
-  margin: 1%;
-}
-
 .list {
   display: flex;
   overflow-x: auto;
 }
 
 .movie {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   height: 550px;
   min-width: 400px;
-  margin: 1% 1%;
   background-size: cover;
   background-repeat: no-repeat;
   filter: brightness(80%);
+  margin-bottom: 10px;
 }
 
 .title {
-  margin-left: 1%;
+  margin-bottom: 1%;
   font-size: 25px;
   font-family: "Oxygen", sans-serif;
+}
+
+.movie-container {
+  margin-bottom: 20px;
+}
+
+.item {
+  margin-right: 20px;
+}
+
+.movie-title {
+  font-size: 16px;
+  font-family: "Oxygen", sans-serif;
+  margin-bottom: 40px;
+}
+
+.button {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  font-size: 60px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background: #556cd6;
+  border-radius: 70px;
+}
+
+@media (max-width: 650px) {
+  .movie {
+    height: 450px;
+    min-width: 300px;
+  }
+
+  .title {
+    margin-bottom: 10px;
+  }
 }

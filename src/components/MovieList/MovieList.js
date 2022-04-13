@@ -1,15 +1,21 @@
 import React from "react";
 import styles from "./MovieList.module.scss";
+import ArrowCircleRightTwoToneIcon from "@mui/icons-material/ArrowCircleRightTwoTone";
 
 const MovieList = ({ title, allMovies }) => {
   const renderedMovies = allMovies.map((cur) => {
     return (
-      <li
-        className={styles.movie}
-        style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/original${cur.poster_path})`,
-        }}
-      ></li>
+      <li className={styles.item}>
+        <div
+          className={styles.movie}
+          style={{
+            backgroundImage: `url(https://image.tmdb.org/t/p/original${cur.poster_path})`,
+          }}
+        >
+          <ArrowCircleRightTwoToneIcon className={styles.button} />
+        </div>
+        <h2 className={styles["movie-title"]}>{cur.title}</h2>
+      </li>
     );
   });
 
