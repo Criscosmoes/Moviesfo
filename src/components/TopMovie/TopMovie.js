@@ -13,9 +13,9 @@ const TopMovie = ({ topMovie }) => {
         <div className={styles.title}>
           <h2>{topMovie.title || topMovie.original_title}</h2>
         </div>
-        <div className={styles.cta}>
+        {/* <div className={styles.cta}>
           <button className={styles["info-btn"]}>WATCH NOW</button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
