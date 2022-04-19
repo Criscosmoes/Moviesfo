@@ -22,11 +22,8 @@ export const fetchMovies = async () => {
   const randomNumber = Math.floor(
     Math.random() * (allMovies.popular.length - 1) + 1
   );
-  console.log(randomNumber);
 
   const topMovie = allMovies.popular[randomNumber];
-
-  console.log(topMovie);
 
   return {
     topMovie,

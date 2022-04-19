@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./MovieList.module.scss";
 import ArrowCircleRightTwoToneIcon from "@mui/icons-material/ArrowCircleRightTwoTone";
+import Link from "next/link";
 
 const MovieList = ({ title, allMovies }) => {
   const renderedMovies = allMovies.map((cur) => {
@@ -12,7 +13,9 @@ const MovieList = ({ title, allMovies }) => {
             backgroundImage: `url(https://image.tmdb.org/t/p/original${cur.poster_path})`,
           }}
         >
-          <ArrowCircleRightTwoToneIcon className={styles.button} />
+          <Link href={"/movies/[id]"} as={`/movies/${cur.id}`}>
+            <ArrowCircleRightTwoToneIcon className={styles.button} />
+          </Link>
         </div>
         <h2 className={styles["movie-title"]}>{cur.title}</h2>
       </li>
