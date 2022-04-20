@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const MovieId = ({ movie }) => {
-  console.log(movie);
   return <div>{movie.title || movie.original_title}</div>;
 };
 

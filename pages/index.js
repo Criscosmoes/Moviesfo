@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import { fetchMovies } from "../src/helper";
+import axios from "axios";
 
 // components
 
@@ -30,9 +30,9 @@ export default function Home({ topMovie, movieList }) {
 }
 
 export async function getServerSideProps() {
-  const data = await fetchMovies();
+  const data = await axios.get("http://localhost:3000/api/hello");
 
-  const { topMovie, movieList } = data;
+  const { topMovie, movieList } = data.data;
 
   return {
     props: { topMovie, movieList },
