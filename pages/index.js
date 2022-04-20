@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+import { fetchMovies } from "../src/helper";
 
 //
 import * as React from "react";
@@ -12,7 +13,13 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
-export default function Home() {
+// components
+
+import NavBar from "../src/components/NavBar/NavBar";
+import TopMovie from "../src/components/TopMovie/TopMovie";
+import MovieList from "../src/components/MovieList/MovieList";
+
+export default function Home({ topMovie, movieList }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -21,25 +28,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              News
-            </Typography>
-            <Button color="inherit">Login</Button>
-          </Toolbar>
-        </AppBar>
-      </Box>
+      <div className={styles.content}>
+        <NavBar />
+        <TopMovie topMovie={topMovie} />
+        <MovieList title={"Popular"} allMovies={movieList.popular} />
+        <MovieList title={"Top Rated"} allMovies={movieList.topRated} />
+        <MovieList title={"Upcoming"} allMovies={movieList.upcoming} />
+      </div>
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const data = await fetchMovies();
+
+  const { topMovie, movieList } = data;
+
+  return {
+    props: { topMovie, movieList },
+  };
 }
