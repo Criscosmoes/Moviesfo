@@ -87,7 +87,7 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  border: 0;
+  /* border: 0; */
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -136,8 +136,8 @@ a {
   color: rgb(27, 24, 24);
 }
 * {
-  box-sizing: border-box;
   border: 1px solid gray;
+  box-sizing: border-box;
   font-family: "Oxygen", sans-serif;
 }
 html {

@@ -1,19 +1,9 @@
 .top-movie {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 450px;
-  margin-top: 1%;
-  margin-bottom: 3%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  margin: 20px 0px;
 }
 
 .movie-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  height: 100%;
   width: 100%;
 }
 
