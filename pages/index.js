@@ -30,7 +30,7 @@ export default function Home({ topMovie, movieList }) {
 }
 
 export async function getServerSideProps() {
-  const data = await axios.get("http://localhost:3000/api/hello");
+  const data = await axios.get("https://moviesfo.vercel.app/api/hello");
 
   const { topMovie, movieList } = data.data;
 
