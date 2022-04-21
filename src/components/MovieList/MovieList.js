@@ -3,34 +3,20 @@ import styles from "./MovieList.module.scss";
 import ArrowCircleRightTwoToneIcon from "@mui/icons-material/ArrowCircleRightTwoTone";
 import Link from "next/link";
 import Image from "next/image";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 const MovieList = ({ title, allMovies }) => {
   const renderedMovies = allMovies.map((cur) => {
-    /* return (
-      <li className={styles.item} key={cur.id}>
-        <div
-          className={styles.movie}
-          style={{
-            backgroundImage: `url(https://image.tmdb.org/t/p/original${cur.poster_path})`,
-          }}
-        >
-          <Link href={"/movies/[id]"} as={`/movies/${cur.id}`}>
-            <ArrowCircleRightTwoToneIcon className={styles.button} />
-          </Link>
-        </div>
-        <h2 className={styles["movie-title"]}>{cur.title}</h2>
-      </li>
-    ); */
-
     return (
       <li className={styles.item} key={cur.id}>
-        <Image
-          layout="responsive"
+        <img
+          className={styles.movie}
           src={`https://image.tmdb.org/t/p/original${cur.poster_path}`}
-          width="450"
-          height="600"
         />
-        <h2 className={styles["movie-title"]}>{cur.title}</h2>
+        <div className={styles["movie-bottom-info"]}>
+          <h2 className={styles["movie-title"]}>{cur.title}</h2>
+          <ArrowRightAltIcon className={styles["icon"]} />
+        </div>
       </li>
     );
   });

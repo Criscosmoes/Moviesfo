@@ -4,19 +4,18 @@
   color: white;
 }
 
+.item {
+  min-width: 380px;
+  margin-right: 20px;
+}
+
 .movie {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
   height: 550px;
-  min-width: 400px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom: 10px;
+  width: 100%;
 }
 
 .title {
-  margin-bottom: 1%;
+  margin-bottom: 10px;
   font-size: 25px;
   font-family: "Oxygen", sans-serif;
   color: white;
@@ -26,37 +25,15 @@
   margin-bottom: 20px;
 }
 
-.item {
-  margin-right: 20px;
-  min-width: 400px;
-}
-
 .movie-title {
   font-size: 16px;
   font-family: "Oxygen", sans-serif;
   margin-bottom: 40px;
 }
 
-.button {
-  margin-bottom: 20px;
-  margin-right: 20px;
-  font-size: 60px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  background: #556cd6;
-  border-radius: 70px;
-}
-
-@media (max-width: 650px) {
-  .movie {
-    height: 450px;
-    min-width: 300px;
-  }
-
-  .title {
-    margin-bottom: 10px;
-  }
+.movie-bottom-info {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* width */
@@ -74,4 +51,24 @@
 .list::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: #556cd6;
+}
+
+.icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .item {
+    min-width: 340px;
+    margin-right: 10px;
+  }
+
+  .title {
+    margin-bottom: 10px;
+  }
+
+  .movie-title {
+    margin-bottom: 5px;
+  }
 }
