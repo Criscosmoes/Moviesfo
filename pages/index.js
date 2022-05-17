@@ -19,7 +19,6 @@ export default function Home({ topMovie, movieList }) {
       </Head>
 
       <div className={styles.content}>
-        <NavBar />
         <TopMovie topMovie={topMovie} />
         <MovieList title={"Popular"} allMovies={movieList.popular} />
         <MovieList title={"Top Rated"} allMovies={movieList.topRated} />

@@ -9,13 +9,22 @@ const MovieList = ({ title, allMovies }) => {
   const renderedMovies = allMovies.map((cur) => {
     return (
       <li className={styles.item} key={cur.id}>
-        <img
+        {/* <img
           className={styles.movie}
           src={`https://image.tmdb.org/t/p/original${cur.poster_path}`}
+        /> */}
+        <Image
+          className={styles.movie}
+          src={`https://image.tmdb.org/t/p/original${cur.poster_path}`}
+          priority={true}
+          width={500}
+          height={700}
         />
         <div className={styles["movie-bottom-info"]}>
           <h2 className={styles["movie-title"]}>{cur.title}</h2>
-          <ArrowRightAltIcon className={styles["icon"]} />
+          <Link href={`/movies/${cur.id}`}>
+            <ArrowRightAltIcon className={styles["icon"]} />
+          </Link>
         </div>
       </li>
     );

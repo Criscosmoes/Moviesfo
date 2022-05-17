@@ -1,7 +1,12 @@
 import axios from "axios";
-
-const MovieId = ({ movie }) => {
-  return <div>{movie.title || movie.original_title}</div>;
+import styles from "./movie.module.scss";
+import MovieInfo from "../../src/components/MovieInfo/MovieInfo";
+const Movie = ({ movie }) => {
+  return (
+    <div className={styles["movie-container"]}>
+      <MovieInfo movie={movie} />
+    </div>
+  );
 };
 
 export const getServerSideProps = async (req) => {
@@ -19,4 +24,4 @@ export const getServerSideProps = async (req) => {
   };
 };
 
-export default MovieId;
+export default Movie;

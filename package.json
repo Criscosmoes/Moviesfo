@@ -18,9 +18,12 @@
     "cors": "^2.8.5",
     "ioredis": "^5.0.4",
     "next": "12.1.4",
+    "nextjs-progressbar": "^0.0.14",
+    "nprogress": "^0.2.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "sass": "^1.49.11"
+    "sass": "^1.49.11",
+    "uninstall": "^0.0.0"
   },
   "devDependencies": {
     "eslint": "8.12.0",

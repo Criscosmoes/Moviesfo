@@ -1,0 +1,69 @@
+.transparent {
+  display: flex;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.image-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 40%;
+}
+
+.movie-information {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 60%;
+  color: white;
+  font-size: 25px;
+  font-family: "Oxygen", sans-serif;
+}
+
+.movie-information a {
+  color: white;
+}
+
+.movie-information p {
+  width: 70%;
+}
+
+.movie-information > * {
+  margin: 20px 0px;
+  margin-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .transparent {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .transparent > * {
+    margin: 10px 0px;
+  }
+
+  .image-container {
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+  }
+
+  .movie-information {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .movie-information p {
+    width: 90%;
+  }
+
+  .movie-information > * {
+    margin-left: 0px;
+  }
+}
